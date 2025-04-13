@@ -1,0 +1,15 @@
+{
+  "name": "passgen",
+  "version": "1.0.0",
+  "main": "app.js",
+  "author": "SASA",
+  "license": "ISC",
+  "description": "CLI program to generate random password.",
+  "bin": {
+    "passgen": "./app.js"
+  },
+  "dependencies": {
+    "commander": "^13.1.0"
+  },
+  "type": "module"
+}
