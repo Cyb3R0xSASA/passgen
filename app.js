@@ -7,7 +7,7 @@ const program = new Command();
 program
     .name('passgen')
     .description('CLI program to generate random password.')
-    .version('1.0.0')
+    .version('1.1.0')
     .option('-l, --pass-len <int>', 'Password length', '16')
     .option('-i, --include <char>', 'Character in password number <n>, symbols, uppercase <u> & lowercase <l> letter', 'nsul')
     .action(({ passLen, include }) => {
@@ -17,6 +17,7 @@ program
 program.addHelpText('after', `
 
     Author: @sasa / Cyb3Rx 🧠
+    Website: https://oxsasa.site
     
     Examples:
         passgen -l 24 -i sul      Generate 24-char password with symbols, uppercase & lowercase
