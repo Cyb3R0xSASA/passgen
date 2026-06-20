@@ -27,7 +27,7 @@ export const generator = (patternLength, types) => {
         }
         return pattern
     }
-    let pattern =  main();
+    let pattern = main();
 
     while (pattern.length < patternLength) {
         pattern = main()
@@ -35,17 +35,19 @@ export const generator = (patternLength, types) => {
 
     const pass = []
     for (const pa of pattern) {
-        if (pa === 's') {
-            pass.push(alphapet.symbols[alphapet.randomInt(0, 31)])
-        }
-        if (pa === 'n') {
-            pass.push(alphapet.number[alphapet.randomInt(0, 9)])
-        }
-        if (pa === 'u') {
-            pass.push(alphapet.upper[alphapet.randomInt(0, 25)])
-        }
-        if (pa === 'l') {
-            pass.push(alphapet.lower[alphapet.randomInt(0, 25)])
+        switch (pa) {
+            case 's':
+                pass.push(alphapet.symbols[alphapet.randomInt(0, 31)])
+                break;
+            case 'n':
+                pass.push(alphapet.number[alphapet.randomInt(0, 9)])
+                break;
+            case 'u':
+                pass.push(alphapet.upper[alphapet.randomInt(0, 25)])
+                break;
+            case 'l':
+                pass.push(alphapet.lower[alphapet.randomInt(0, 25)])
+                break;
         }
     };
 
